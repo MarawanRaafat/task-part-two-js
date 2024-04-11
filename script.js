@@ -3,26 +3,30 @@
 
 function getValue() {
 
-    const value = document.querySelector(input).value
-    const reslt = document.querySelector(h3)
+    const value = document.querySelector(".numer-input").value
 
-    const degree = 
+
+    const numResult  = document.querySelector("h3")
+    numResult.textContent = value
+
+    
+
     if (value >= 90) {
-        degree = ("A")
+        numResult.textContent = ("A")
     } else {
         if (value >= 80) {
-            degree = ("B")
+            numResult.textContent = ("B")
         } else {
             if (value >= 70) {
-                degree = ("C")
+                numResult.textContent = ("C")
             } else {
                 if (value >= 60) {
-                    degree = ("D")
+                    numResult.textContent = ("D")
                 } else {
                     if (value >= 50) {
-                        degree = ("E")
+                        numResult.textContent = ("E")
                     } else {
-                        degree = ("F")
+                        numResult.textContent = ("F")
                     }
                 }
             }
@@ -30,7 +34,8 @@ function getValue() {
     }
 
    
-    reslt.textContent = degree
+    
 }
 
-document.querySelector("calculate").onclick = getValue()
+
+document.querySelector("button").onclick = getValue
